@@ -13,16 +13,16 @@ gameContainer.appendChild(player);
 let lastTime = 0;
 let elapsedTime = 0;
 let score = 0;
-let lives = 3;
+let lives = 99;
 let isGameRunning = false;
 let playerX = 100;
 let playerY = 100;
-const playerSpeed = 200; // pixels per second
+const playerSpeed = 500; // pixels per second
 
 const enemies = [];
 const bullets = [];
 const bulletSpeed = 300; // pixels per second
-const enemySpeed = 100; // pixels per second
+const enemySpeed = 50; // pixels per second
 const enemySpawnInterval = 2000; // milliseconds
 let enemySpawnTimer = 0;
 
@@ -188,9 +188,9 @@ function continueGame() {
 function restartGame() {
     elapsedTime = 0;
     score = 0;
-    lives = 3;
-    playerX = 100;
-    playerY = 100;
+    lives = 99;
+    playerX = 900;
+    playerY = 800;
     timeDisplay.textContent = elapsedTime.toFixed(2);
     scoreDisplay.textContent = score;
     livesDisplay.textContent = lives;
